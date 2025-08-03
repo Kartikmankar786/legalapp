@@ -6,8 +6,7 @@ import os
 st.set_page_config(page_title="Indian Legal Advisor", layout="centered")
 st.title("Indian Legal Advisor")
 st.markdown("Decribe your legal issue Below: ")
-api_key = os.getenv("API_KEY", st.secrets.get("API_KEY","no-key-found"))
-st.text(f"API Key Length: {len(api_key)}")  # TEMP: just to verify length is 74
+api_key = st.secrets["API_KEY"]
 
 user_input = st.text_area("Enter your legal issue here: ", height=200)
 
