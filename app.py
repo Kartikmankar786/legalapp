@@ -8,6 +8,9 @@ st.title("Indian Legal Advisor")
 st.markdown("Decribe your legal issue Below: ")
 api_key = st.secrets["API_KEY"]
 
+
+st.write("My secret API Key is:", st.secrets["API_KEY"])
+
 user_input = st.text_area("Enter your legal issue here: ", height=200)
 
 def is_valid_input(text):
